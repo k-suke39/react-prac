@@ -28,3 +28,4 @@ console.log(result);
 //関数の形を覚えよう
 //コールバックの使い方
 //addEventLinstenrは何してる？
+//addEventListnerからコールバックを理解しよう
