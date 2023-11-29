@@ -22,21 +22,37 @@
 
 //PromiseStateがrejected
 //PromiseResultがhello
-const promise = new Promise((resolve, reject) => {
-	reject('reject');
-});
+// const promise = new Promise((resolve, reject) => {
+// 	reject('reject');
+// });
 
-promise.then((value) => {
-	console.log(value);
-	console.log('then呼ばれたー');
-});
+// promise.then((value) => {
+// 	console.log(value);
+// 	console.log('then呼ばれたー');
+// });
 
-promise.catch((value) => {
-	console.log(value);
-	console.log('catch呼ばれたー');
-});
+// promise.catch((value) => {
+// 	console.log(value);
+// 	console.log('catch呼ばれたー');
+// });
 
-promise.finally((value) => {
-	console.log(value);
-	console.log('finally呼ばれたー');
-});
+// promise.finally((value) => {
+// 	console.log(value);
+// 	console.log('finally呼ばれたー');
+// });
+
+const pro = new Promise((resolve, reject) => {
+	resolve(1);
+})
+	.then((value) => {
+		console.log(value);
+		return 2;
+	})
+	.then((value) => {
+		console.log(value);
+		return 3;
+	})
+	.then((value) => {
+		console.log(value);
+		return 4;
+	});
