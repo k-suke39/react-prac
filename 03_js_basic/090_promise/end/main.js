@@ -18,7 +18,25 @@
 
 //PromiseStateがfullfileed
 //PromiseResultがhello
-let promise = new Promise((resolve) => {
-	resolve('hello');
+//then、finallyが呼ばれる
+
+//PromiseStateがrejected
+//PromiseResultがhello
+const promise = new Promise((resolve, reject) => {
+	reject('reject');
 });
-console.log(promise);
+
+promise.then((value) => {
+	console.log(value);
+	console.log('then呼ばれたー');
+});
+
+promise.catch((value) => {
+	console.log(value);
+	console.log('catch呼ばれたー');
+});
+
+promise.finally((value) => {
+	console.log(value);
+	console.log('finally呼ばれたー');
+});
